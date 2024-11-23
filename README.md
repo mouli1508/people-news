@@ -24,7 +24,8 @@ This project is a **Streamlit application** designed to extract data from Reddit
 
 ## Demo
 
-<img src="demo_image.png" alt="Application Screenshot" width="800">
+<img src="image.png" alt="Application Screenshot" width="800">
+<img src="image2.png" alt="Application Screenshot" width="800">
 
 ---
 
