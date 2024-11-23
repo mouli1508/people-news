@@ -19,6 +19,13 @@ This project is a **Streamlit application** designed to extract data from Reddit
 - **Streamlit Interface**:
   - User-friendly interface for inputting questions and visualizing results.
   - Includes spinners and success/error notifications for better user experience.
+ 
+---
+
+## Figma Design
+
+[View the Figma Board](https://embed.figma.com/board/xXcX8K3Eb9jM7Lb41HlXpU/Untitled?node-id=0-1&embed-host=share)
+
 
 ---
 
@@ -26,8 +33,6 @@ This project is a **Streamlit application** designed to extract data from Reddit
 
 <img src="image.png" alt="Application Screenshot" width="800">
 <img src="image2.png" alt="Application Screenshot" width="800">
-
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/board/xXcX8K3Eb9jM7Lb41HlXpU/Untitled?node-id=0-1&embed-host=share" allowfullscreen></iframe>
 
 ---
 
