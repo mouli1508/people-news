@@ -32,7 +32,7 @@ This project is a **Streamlit application** designed to extract data from Reddit
 
 ### Prerequisites
 
-- Python 3.8 or above
+- Python 3.12 or above
 - API keys for:
   - **Google Custom Search API** (for Reddit URL scraping)
   - **Google Gemini LLM API** (for summarization)
@@ -41,15 +41,15 @@ This project is a **Streamlit application** designed to extract data from Reddit
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-repo/reddit-summarizer.git
-cd reddit-summarizer
+git clone https://github.com/mouli1508/people-news
+cd people-news
 ```
 
-### 2. Create a Virtual Environment
+### 2. Create a Conda Environment
 
 ```bash
-python -m venv env
-source env/bin/activate    # On Windows, use `env\Scripts\activate`
+conda create -n "reddit-summary" python=3.12
+conda activate reddit-summary
 ```
 
 ### 3. Install Dependencies
@@ -82,7 +82,7 @@ SEARCH_API_KEY=your_google_search_api_key
 Start the application by running the following command:
 
 ```bash
-streamlit run reddit_summary_app.py
+streamlit run ask_people.py
 ```
 
 ### 2. Enter Your Query
@@ -107,7 +107,7 @@ streamlit run reddit_summary_app.py
 ```
 .
 ├── reddit_data_extraction.py  # Library for extracting Reddit data
-├── reddit_summary_app.py      # Main Streamlit app code
+├── ask_people.py              # Main Streamlit app code
 ├── requirements.txt           # Python dependencies
 ├── .env                       # Environment variables
 └── README.md                  # Project documentation
@@ -118,7 +118,7 @@ streamlit run reddit_summary_app.py
 ## Key Technologies
 
 - **Streamlit**: For building an interactive UI.
-- **Google Gemini LLM**: For summarization and sentiment analysis.
+- **Google Gemini LLM**: For summarization and sentiment analysis - gemini 1.5 flash (1M context).
 - **Google Custom Search API**: For fetching Reddit links.
 - **Reddit API (PRAW)**: For accessing Reddit posts and comments.
 - **Python-dotenv**: For managing environment variables.
