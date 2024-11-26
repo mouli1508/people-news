@@ -40,8 +40,9 @@ def generate_summary(extracted_data, context_question, api_key):
     model = genai.GenerativeModel("models/gemini-1.5-flash")
     prompt = (
         f"The following is data extracted from Reddit. Based on the question below, "
-        f"generate a concise and accurate summary and do not mention that you referred first, second or third post, just provide a general summary:\n\n"
-        f"also at the end, generate final conclusion on the sentiment of the extracted reddit data on whether it is positive, negative, or neutral"
+        f"generate a concise and accurate detailed summary and do not mention that you referred first, second or third post, just provide a general summary:\n\n"
+        "Make use of the score of the comment to weigh more on a comment - higher the score, more important the information is."
+        # f"also at the end, generate final conclusion on the sentiment of the extracted reddit data on whether it is positive, negative, or neutral"
         f"Question: {context_question}\n\n"
     )
     for data in extracted_data:
@@ -72,7 +73,7 @@ st.markdown(
 )
 
 # App Title
-st.title("🔍 Reddit Data Extraction and Summarization")
+st.title("🔍 Ask Redditors")
 st.markdown("**Analyze and summarize Reddit discussions on your question.**")
 
 # User inputs
@@ -100,9 +101,9 @@ if st.button("✨ Generate Summary"):
                 reddit_data = load_reddit_data("reddit_data.json")
                 extracted_data = extract_reddit_text(reddit_data)
                 summary = generate_summary(extracted_data, question, google_api_key)
-                st.success("✨ Summary generated successfully!")
+                st.success("✨ Content generated successfully!")
 
-                st.subheader("📄 Summary and Sentiment Analysis")
+                st.subheader("📄 What Redditors Think")
                 st.markdown(f"{summary}")
         else:
             st.error("❌ No Reddit URLs found for the given question.")
